@@ -10,7 +10,7 @@ This is the simply SQL assembler for SELECT,INSERT,UPDATE,DELETE.You can create 
 	    fmt.Println(pg.NewSelect().ByStandard("PGTable", nil, nil, nil, "Field1", "Field2", "Field3"))
 	}
 ```
-It will return_SELECT Field1,Field2,Field3 FROM PGTable_
+It will return `SELECT Field1,Field2,Field3 FROM PGTable`
 
 
 ##2.Create SELECT statement with WHERE clause
@@ -25,7 +25,7 @@ It will return_SELECT Field1,Field2,Field3 FROM PGTable_
 	}
 
 ```
-It will return _SELECT * FROM PGTable4Condition WHERE CF1=$1 AND CF2>$2 AND CF3<$3 [1 99 200]_,you can find the value slice _[1,99,200]_ put it to Golang database funtions that need to call directly.
+It will return `SELECT * FROM PGTable4Condition WHERE CF1=$1 AND CF2>$2 AND CF3<$3 [1 99 200]`,you can find the value slice `[1,99,200]` put it to Golang database funtions that need to call directly.
 
-Most example you can find in builder_test.go.Please let me know if you find some issue or give suggestion.Call me by mail neo_yan@outlook.com
+Most example you can find in `builder_test.go`.Please let me know if you find some issue or give suggestion.Call me by mail _neo_yan@outlook.com_
 Enjoy!!!
