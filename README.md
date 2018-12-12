@@ -4,9 +4,12 @@ This is the simply SQL assembler for SELECT,INSERT,UPDATE,DELETE.You can create 
 >>**1.Create single SELECT statement without WHERE clause**
 ```golang
 	package main
-	import "fmt"
+	import (
+	"fmt"
+	"github.com/sharekte/summer"
+	)
 	func main(){
-	    pg := CreatePGInstance()
+	    pg :=summer.CreatePGInstance()
 	    fmt.Println(pg.NewSelect().ByStandard("PGTable", nil, nil, nil, "Field1", "Field2", "Field3"))
 	}
 ```
@@ -16,9 +19,12 @@ It will return `SELECT Field1,Field2,Field3 FROM PGTable`
 >>**2.Create SELECT statement with WHERE clause**
 ```golang
 	package main
-	import "fmt"
+	import (
+	"fmt"
+	"github.com/sharekte/summer"
+	)
 	func main(){
-	    pg := CreatePGInstance()
+	    pg := summer.CreatePGInstance()
 	    cd := pg.NewConditions()
 	    cd.Append(map[string]interface{}{"CF1=": 1, "CF2>": 99, "CF3<": 200})
 	    fmt.Println(pg.NewSelect().ByConditions("PGTable4Condition", cd, nil, nil, nil))
