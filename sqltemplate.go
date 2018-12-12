@@ -1,4 +1,4 @@
-package sqlbuilder
+package summer
 
 var (
 	sql4insert    string = `INSERT INTO %s %s VALUES %s ON CONFLICT (%s) DO NOTHING`
