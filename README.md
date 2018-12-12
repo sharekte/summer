@@ -1,7 +1,9 @@
 # summer
 This is the simply SQL assembler for SELECT,INSERT,UPDATE,DELETE.You can create them from some parameter given, in the meantime it can return parameter values also and save the step to call database funtion on Golang.There are some example as below.
+>>**1.Installation**<br>
+Open terminal and type Golang command `go get github.com/sharekte/summer` to finish installation
 
->>**1.Create single SELECT statement without WHERE clause**
+>>**2.Create single SELECT statement without WHERE clause**
 ```golang
 	package main
 	import (
@@ -16,7 +18,7 @@ This is the simply SQL assembler for SELECT,INSERT,UPDATE,DELETE.You can create 
 It will return `SELECT Field1,Field2,Field3 FROM PGTable`
 
 
->>**2.Create SELECT statement with WHERE clause**
+>>**3.Create SELECT statement with WHERE clause**
 ```golang
 	package main
 	import (
